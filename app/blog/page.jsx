@@ -15,9 +15,10 @@ export default function BlogPage() {
       try {
         const response = await fetch('/api/blog')
         const data = await response.json()
-        setBlogPosts(data)
+        setBlogPosts(Array.isArray(data) ? data : [])
       } catch (error) {
         console.error('Failed to fetch blog posts:', error)
+        setBlogPosts([])
       } finally {
         setLoading(false)
       }

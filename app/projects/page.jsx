@@ -14,9 +14,10 @@ export default function ProjectsPage() {
       try {
         const response = await fetch('/api/projects')
         const data = await response.json()
-        setProjects(data)
+        setProjects(Array.isArray(data) ? data : [])
       } catch (error) {
         console.error('Failed to fetch projects:', error)
+        setProjects([])
       } finally {
         setLoading(false)
       }
