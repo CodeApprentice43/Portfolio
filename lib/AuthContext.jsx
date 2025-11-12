@@ -33,8 +33,16 @@
     const value = {
       user,
       loading,
-      signIn: (email, password) => supabase?.auth.signInWithPassword({ email, password }),
-      signOut: () => supabase?.auth.signOut(),
+      signIn: async (email, password) => {
+        if (!supabase) {
+          return { error: { message: 'Supabase client not initialized. Check environment variables.' } }
+        }
+        return supabase.auth.signInWithPassword({ email, password })
+      },
+      signOut: async () => {
+        if (!supabase) return { error: { message: 'Supabase client not initialized' } }
+        return supabase.auth.signOut()
+      },
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>

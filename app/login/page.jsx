@@ -24,11 +24,13 @@
 
         if (error) {
           setError(error.message)
+          console.error('Login error:', error)
         } else {
           router.push('/admin')
         }
       } catch (err) {
-        setError('An error occurred during login')
+        setError(err?.message || 'An error occurred during login')
+        console.error('Login exception:', err)
       } finally {
         setLoading(false)
       }
