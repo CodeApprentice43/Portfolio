@@ -3,10 +3,27 @@
 import { motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/Button"
-
-const projects = []
+import { useEffect, useState } from "react"
 
 export default function ProjectsPage() {
+  const [projects, setProjects] = useState([])
+  const [loading, setLoading] = useState(true)
+
+  useEffect(() => {
+    const fetchProjects = async () => {
+      try {
+        const response = await fetch('/api/projects')
+        const data = await response.json()
+        setProjects(data)
+      } catch (error) {
+        console.error('Failed to fetch projects:', error)
+      } finally {
+        setLoading(false)
+      }
+    }
+
+    fetchProjects()
+  }, [])
   return (
     <div className="container mx-auto px-4 py-20">
       <motion.div
@@ -21,7 +38,12 @@ export default function ProjectsPage() {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+        {loading ? (
+          <div className="text-center text-[#E6EDF3]/60 font-mono">Loading projects...</div>
+        ) : projects.length === 0 ? (
+          <div className="text-center text-[#E6EDF3]/60 font-mono">No projects yet</div>
+        ) : (
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {projects.map((project, index) => (
             <motion.div
               key={project.id}
@@ -82,7 +104,8 @@ export default function ProjectsPage() {
               </div>
             </motion.div>
           ))}
-        </div>
+          </div>
+        )}
       </motion.div>
     </div>
   )

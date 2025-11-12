@@ -29,9 +29,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-[#E6EDF3]/60 max-w-2xl mx-auto leading-relaxed"
           >
-            I am passionate about building elegant solutions to complex problems. 
-            I love exploring new technologies, reading technical books, and sharing 
-            my learnings through writing.
+            I enjoy writing code and building things from the ground up. Most of my work revolves around web technologies, but I’m also fascinated by distributed systems, networking, and cloud computing. Every now and then, I dive into a good book and like to share my thoughts about it and occasionally, I’ll write blog posts on whatever topics spark my curiosity.
           </motion.p>
 
           <motion.div
@@ -71,8 +69,10 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold text-[#E6EDF3]">Education</h3>
               <p className="text-[#E6EDF3]/60 text-sm leading-relaxed">
-                Pursuing Bachelor's in Computer Science with a focus on 
-                software engineering and web technologies.
+                B.Sc. in Computer Science from University at Buffalo 2025 
+                <br></br>
+                <br></br>
+                MS in Computer Science from University at Buffalo (In Progress).
               </p>
             </div>
 
@@ -83,7 +83,7 @@ export default function LandingPage() {
               <h3 className="text-xl font-semibold text-[#E6EDF3]">Development</h3>
               <p className="text-[#E6EDF3]/60 text-sm leading-relaxed">
                 Building full-stack applications with modern frameworks like 
-                Next.js, React, and Node.js.
+                Next.js, React, and Node.js and system level programming with Golang.
               </p>
             </div>
 
@@ -93,8 +93,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold text-[#E6EDF3]">Interests</h3>
               <p className="text-[#E6EDF3]/60 text-sm leading-relaxed">
-                Avid reader of technical books, passionate about writing, 
-                and always learning new technologies.
+                Reading, vidoe games, movies, sharing book reviews and blogging.
               </p>
             </div>
           </div>
