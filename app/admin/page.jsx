@@ -37,18 +37,22 @@
         if (activeTab === 'projects') {
           const res = await fetch('/api/projects')
           const data = await res.json()
-          setProjects(data)
+          setProjects(Array.isArray(data) ? data : [])
         } else if (activeTab === 'blogs') {
           const res = await fetch('/api/blog')
           const data = await res.json()
-          setBlogs(data)
+          setBlogs(Array.isArray(data) ? data : [])
         } else if (activeTab === 'reviews') {
           const res = await fetch('/api/reviews')
           const data = await res.json()
-          setReviews(data)
+          setReviews(Array.isArray(data) ? data : [])
         }
       } catch (error) {
         console.error('Error fetching data:', error)
+        // Set empty arrays on error
+        if (activeTab === 'projects') setProjects([])
+        if (activeTab === 'blogs') setBlogs([])
+        if (activeTab === 'reviews') setReviews([])
       }
     }
 

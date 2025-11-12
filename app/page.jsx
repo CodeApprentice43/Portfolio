@@ -93,7 +93,7 @@ export default function LandingPage() {
               </div>
               <h3 className="text-xl font-semibold text-[#E6EDF3]">Interests</h3>
               <p className="text-[#E6EDF3]/60 text-sm leading-relaxed">
-                Reading, vidoe games, movies, sharing book reviews and blogging.
+                Reading, video games, movies, sharing book reviews and blogging.
               </p>
             </div>
           </div>
