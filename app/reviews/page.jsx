@@ -4,26 +4,7 @@ import { motion } from "framer-motion"
 import { Book, Star } from "lucide-react"
 import Image from "next/image"
 
-const reviews = [
-  {
-    id: 1,
-    title: "Clean Code",
-    author: "Robert C. Martin",
-    rating: 5,
-    content: "An essential read for any software developer. Martin's principles of writing maintainable, readable code have fundamentally changed how I approach programming.",
-    date: "Jan 2025",
-    cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
-  },
-  {
-    id: 2,
-    title: "Designing Data-Intensive Applications",
-    author: "Martin Kleppmann",
-    rating: 5,
-    content: "A comprehensive deep-dive into distributed systems and database design.",
-    date: "Dec 2024",
-    cover: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=400&h=600&fit=crop",
-  },
-]
+const reviews = []
 
 export default function ReviewsPage() {
   return (
@@ -39,7 +20,7 @@ export default function ReviewsPage() {
             <h1 className="text-4xl font-bold text-[#E6EDF3]">Book Reviews</h1>
           </div>
           <p className="text-[#E6EDF3]/60 font-mono">
-            Technical books that shaped my journey
+            Review on books I have read, not strictly restricted to tech books
           </p>
         </div>
 

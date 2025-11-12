@@ -4,56 +4,7 @@ import { motion } from "framer-motion"
 import { ExternalLink, Github } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 
-const projects = [
-  {
-    id: 1,
-    title: "E-Commerce Platform",
-    description: "A full-stack e-commerce solution with cart management, payment integration, and admin dashboard.",
-    techStack: ["Next.js", "PostgreSQL", "Stripe", "Tailwind"],
-    link: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: 2,
-    title: "Task Management App",
-    description: "Collaborative task manager with real-time updates, drag-and-drop, and team features.",
-    techStack: ["React", "Firebase", "TypeScript", "DND Kit"],
-    link: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: 3,
-    title: "Code Snippet Manager",
-    description: "Save, organize, and share code snippets with syntax highlighting and tags.",
-    techStack: ["Node.js", "MongoDB", "Express", "React"],
-    link: "https://github.com",
-    demo: null,
-  },
-  {
-    id: 4,
-    title: "Weather Dashboard",
-    description: "Real-time weather data visualization with forecasts and location-based alerts.",
-    techStack: ["Vue.js", "OpenWeather API", "Chart.js"],
-    link: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: 5,
-    title: "Blog Platform",
-    description: "Markdown-based blogging platform with SEO optimization and analytics.",
-    techStack: ["Next.js", "Prisma", "PostgreSQL", "MDX"],
-    link: "https://github.com",
-    demo: "https://demo.com",
-  },
-  {
-    id: 6,
-    title: "Portfolio Generator",
-    description: "Automated portfolio site generator from GitHub profile and repositories.",
-    techStack: ["Python", "FastAPI", "React", "GitHub API"],
-    link: "https://github.com",
-    demo: null,
-  },
-]
+const projects = []
 
 export default function ProjectsPage() {
   return (

@@ -4,24 +4,7 @@ import { motion } from "framer-motion"
 import { Calendar, Clock, ArrowRight } from "lucide-react"
 import { Button } from "@/components/ui/Button"
 
-const blogPosts = [
-  {
-    id: 1,
-    title: "Building Scalable APIs with Next.js and Prisma",
-    excerpt: "Learn how to build type-safe, scalable REST APIs using Next.js API routes and Prisma ORM.",
-    date: "Feb 5, 2025",
-    readTime: "8 min read",
-    tags: ["Next.js", "Prisma", "API"],
-  },
-  {
-    id: 2,
-    title: "Authentication Patterns in Modern Web Apps",
-    excerpt: "A comprehensive guide to implementing secure authentication with Supabase Auth.",
-    date: "Jan 28, 2025",
-    readTime: "12 min read",
-    tags: ["Auth", "Security", "Supabase"],
-  },
-]
+const blogPosts = []
 
 export default function BlogPage() {
   return (
@@ -32,9 +15,9 @@ export default function BlogPage() {
         className="max-w-4xl mx-auto"
       >
         <div className="text-center mb-12">
-          <h1 className="text-4xl font-bold text-[#E6EDF3] mb-4">Technical Blog</h1>
+          <h1 className="text-4xl font-bold text-[#E6EDF3] mb-4">Blog</h1>
           <p className="text-[#E6EDF3]/60 font-mono">
-            Thoughts on software development and technology
+            Blogs I write on software development, technology and anything else I find interesting and want to share 
           </p>
         </div>
 

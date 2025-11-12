@@ -3,74 +3,7 @@
 import { motion } from "framer-motion"
 import { Code2, Database, Cloud, Settings, Globe, Palette } from "lucide-react"
 
-const skillCategories = [
-  {
-    category: "Frontend",
-    icon: Palette,
-    skills: [
-      { name: "React", level: 90 },
-      { name: "Next.js", level: 85 },
-      { name: "TypeScript", level: 80 },
-      { name: "Tailwind CSS", level: 95 },
-      { name: "Vue.js", level: 70 },
-    ],
-  },
-  {
-    category: "Backend",
-    icon: Code2,
-    skills: [
-      { name: "Node.js", level: 85 },
-      { name: "Express", level: 80 },
-      { name: "Python", level: 75 },
-      { name: "FastAPI", level: 70 },
-      { name: "REST APIs", level: 90 },
-    ],
-  },
-  {
-    category: "Database",
-    icon: Database,
-    skills: [
-      { name: "PostgreSQL", level: 85 },
-      { name: "MongoDB", level: 80 },
-      { name: "Prisma ORM", level: 85 },
-      { name: "Redis", level: 70 },
-      { name: "Supabase", level: 80 },
-    ],
-  },
-  {
-    category: "Cloud & DevOps",
-    icon: Cloud,
-    skills: [
-      { name: "AWS", level: 75 },
-      { name: "Vercel", level: 90 },
-      { name: "Docker", level: 70 },
-      { name: "Git", level: 90 },
-      { name: "CI/CD", level: 75 },
-    ],
-  },
-  {
-    category: "Tools & Others",
-    icon: Settings,
-    skills: [
-      { name: "VS Code", level: 95 },
-      { name: "Figma", level: 75 },
-      { name: "Postman", level: 85 },
-      { name: "Linux", level: 80 },
-      { name: "Agile", level: 75 },
-    ],
-  },
-  {
-    category: "Web Technologies",
-    icon: Globe,
-    skills: [
-      { name: "HTML/CSS", level: 95 },
-      { name: "JavaScript", level: 90 },
-      { name: "WebSockets", level: 70 },
-      { name: "GraphQL", level: 65 },
-      { name: "OAuth", level: 75 },
-    ],
-  },
-]
+const skillCategories = []
 
 export default function SkillsPage() {
   return (
