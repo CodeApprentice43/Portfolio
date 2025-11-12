@@ -10,6 +10,12 @@
     const [loading, setLoading] = useState(true)
 
     useEffect(() => {
+      // Skip auth initialization if supabase client is not available
+      if (!supabase) {
+        setLoading(false)
+        return
+      }
+
       // Check active sessions
       supabase.auth.getSession().then(({ data: { session } }) => {
         setUser(session?.user ?? null)
@@ -27,8 +33,8 @@
     const value = {
       user,
       loading,
-      signIn: (email, password) => supabase.auth.signInWithPassword({ email, password }),
-      signOut: () => supabase.auth.signOut(),
+      signIn: (email, password) => supabase?.auth.signInWithPassword({ email, password }),
+      signOut: () => supabase?.auth.signOut(),
     }
 
     return <AuthContext.Provider value={value}>{children}</AuthContext.Provider>
