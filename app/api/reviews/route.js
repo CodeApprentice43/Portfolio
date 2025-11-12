@@ -17,7 +17,8 @@ export const POST = async (request) => {
     });
     return NextResponse.json(createdReview,{status:201});
     }catch(error){
-        return NextResponse.json({error:"Failed to create new review"},{status:500})
+        console.error("Review creation error:", error)
+        return NextResponse.json({error:"Failed to create new review", details: error.message},{status:500})
     }
 }
 

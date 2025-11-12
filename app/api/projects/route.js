@@ -19,6 +19,7 @@ export const POST = async(request)=> {
         });
         return NextResponse.json(createdProject, {status: 201});
     }catch(error){
-        return NextResponse.json({error: "Failed to create project"}, {status: 500});
+        console.error("Project creation error:", error)
+        return NextResponse.json({error: "Failed to create project", details: error.message}, {status: 500});
     }
 }

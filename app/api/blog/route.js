@@ -18,6 +18,7 @@ export const POST = async (request) => {
     });
     return NextResponse.json(createdBlog,{status:201});
     }catch(error){
-        return NextResponse.json({error:"Failed to create new blog"},{status:500})
+        console.error("Blog creation error:", error)
+        return NextResponse.json({error:"Failed to create new blog", details: error.message},{status:500})
     }
 }
