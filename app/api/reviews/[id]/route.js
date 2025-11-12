@@ -1,6 +1,24 @@
 import { NextResponse } from "next/server";
 import {prisma} from "@/lib/prisma";
 
+export const GET = async(request, {params}) => {
+    try {
+        const id = params.id;
+        const review = await prisma.review.findUnique({
+            where: { id: id },
+        });
+
+        if (!review) {
+            return NextResponse.json({ error: "Review not found" }, { status: 404 });
+        }
+
+        return NextResponse.json(review, { status: 200 });
+    } catch (error) {
+        console.error("Review fetch error:", error)
+        return NextResponse.json({ error: "Failed to fetch review", details: error.message }, { status: 500 });
+    }
+}
+
 export const PUT = async(request,{params}) => {
     try {
         const id = params.id;

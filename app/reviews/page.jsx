@@ -3,6 +3,7 @@
 import { motion } from "framer-motion"
 import { Book, Star } from "lucide-react"
 import Image from "next/image"
+import Link from "next/link"
 import { useEffect, useState } from "react"
 
 export default function ReviewsPage() {
@@ -33,6 +34,10 @@ export default function ReviewsPage() {
       day: 'numeric'
     })
   }
+
+  const getExcerpt = (content) => {
+    return content.substring(0, 150) + (content.length > 150 ? '...' : '')
+  }
   return (
     <div className="container mx-auto px-4 py-20">
       <motion.div
@@ -57,13 +62,13 @@ export default function ReviewsPage() {
         ) : (
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6">
           {reviews.map((review, index) => (
-            <motion.div
-              key={review.id}
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ delay: index * 0.1 }}
-              className="bg-[#161B22] border border-[#1F6FEB]/20 rounded-lg overflow-hidden hover:border-[#1F6FEB]/50 transition-all"
-            >
+            <Link href={`/reviews/${review.id}`} key={review.id}>
+              <motion.div
+                initial={{ opacity: 0, y: 20 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ delay: index * 0.1 }}
+                className="bg-[#161B22] border border-[#1F6FEB]/20 rounded-lg overflow-hidden hover:border-[#1F6FEB]/50 transition-all cursor-pointer h-full"
+              >
               {review.bookCover && (
                 <div className="aspect-[2/3] bg-[#0D1117] relative overflow-hidden">
                   <Image
@@ -94,15 +99,16 @@ export default function ReviewsPage() {
                   </div>
                 )}
 
-                <p className="text-sm text-[#E6EDF3]/70 leading-relaxed line-clamp-4">
-                  {review.content}
+                <p className="text-sm text-[#E6EDF3]/70 leading-relaxed">
+                  {getExcerpt(review.content)}
                 </p>
 
                 <div className="pt-2 border-t border-[#1F6FEB]/10">
                   <span className="text-xs text-[#E6EDF3]/50 font-mono">{formatDate(review.createdAt)}</span>
                 </div>
               </div>
-            </motion.div>
+              </motion.div>
+            </Link>
           ))}
           </div>
         )}
