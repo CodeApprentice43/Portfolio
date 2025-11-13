@@ -3,11 +3,14 @@
 import { motion } from "framer-motion"
 import { ArrowRight, GraduationCap, Code2, BookOpen } from "lucide-react"
 import { Button } from "@/components/ui/Button"
+import { AsciiFluid } from "@/components/animations/AsciiFluid"
 import Link from "next/link"
 
 export default function LandingPage() {
   return (
-    <div className="container mx-auto px-4">
+    <>
+      <AsciiFluid />
+      <div className="container mx-auto px-4 relative z-10">
       <section className="min-h-[80vh] flex items-center justify-center py-20">
         <div className="max-w-4xl mx-auto text-center space-y-8">
           <motion.div
@@ -99,6 +102,7 @@ export default function LandingPage() {
           </div>
         </motion.div>
       </section>
-    </div>
+      </div>
+    </>
   )
 }
