@@ -22,7 +22,7 @@ export default function LandingPage() {
               Hi, I am <span className="text-[#1F6FEB]">Nafis Mortuza</span>
             </h1>
             <p className="text-xl text-[#E6EDF3]/70 font-mono">
-              Computer Science Student & Software Developer
+              Software Developer
             </p>
           </motion.div>
 
@@ -32,7 +32,7 @@ export default function LandingPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-[#E6EDF3]/60 max-w-2xl mx-auto leading-relaxed"
           >
-            I build software using Python, Javascript/Typescript, NodeJS and more. I enjoy building fullstack applications from scratch and exploring systems to understand how they work at a fundamental level.
+            I am a new Computer Science graduate from the University at Buffalo. I build software using Python, Javascript/Typescript, NodeJS and more. I enjoy building fullstack applications from scratch and exploring systems to understand how they work at a fundamental level.
             I also enjoy learning and building distributed systems using Golang and writing systems level programs using C. I am constantly exploring new technologies,frameworks and languages to expand my skill set.
           </motion.p>
 
@@ -75,8 +75,6 @@ export default function LandingPage() {
               <p className="text-[#E6EDF3]/60 text-sm leading-relaxed">
                 B.Sc. in Computer Science from University at Buffalo 2025 
                 <br></br>
-                <br></br>
-                MS in Computer Science from University at Buffalo (In Progress).
               </p>
             </div>
 
