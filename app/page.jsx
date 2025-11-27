@@ -32,7 +32,8 @@ export default function LandingPage() {
             transition={{ duration: 0.5, delay: 0.1 }}
             className="text-lg text-[#E6EDF3]/60 max-w-2xl mx-auto leading-relaxed"
           >
-            I enjoy writing code and building things from the ground up. Most of my work revolves around web technologies, but I’m also fascinated by distributed systems, networking, and cloud computing. Every now and then, I dive into a good book and like to share my thoughts about it and occasionally, I’ll write blog posts on whatever topics spark my curiosity.
+            I build software using Python, Javascript/Typescript, NodeJS and more. I enjoy building fullstack applications from scratch and exploring systems to understand how they work at a fundamental level.
+            I also enjoy learning and building distributed systems using Golang and writing systems level programs using C. I am constantly exploring new technologies,frameworks and languages to expand my skill set.
           </motion.p>
 
           <motion.div
